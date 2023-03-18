@@ -47,6 +47,7 @@
       align-items: center;
       background-color: #72dcb8ed;
       color: white;
+      font-size:0.8%;
       cursor: pointer;
       // 去除a链接默认样式
       a {

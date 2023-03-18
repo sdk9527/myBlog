@@ -1,30 +1,32 @@
 <template>
-  <!-- 主要结构框架 -->
-  <div class="common-layout">
-    <el-container>
-      <el-header height="100px"> Header content </el-header>
-      <el-main style="background-color: aqua" class="main">
-        Main content
-      </el-main>
-      <el-footer height="200px" style="background-color: blueviolet">
-        Footer content
-      </el-footer>
-    </el-container>
-  </div>
+	<!-- 主要结构框架 -->
+	<div class="common-layout">
+		<el-container>
+			<el-header class="header">
+				<myHeader></myHeader>
+			</el-header>
+			<el-main class="main">
+				<router-view></router-view>
+			</el-main>
+			<el-footer class="footer"> Footer content </el-footer>
+		</el-container>
+	</div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import myHeader from './header.vue';
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .common-layout {
-  .el-header {
-    position: relative;
-    background-color: yellowgreen;
-  }
-  .main {
-    height: 3000px;
-  }
+	.el-header {
+		position: fixed;
+		border-bottom: 1px solid #e8e9e7;
+		height: 3.8rem;
+		width: 100%;
+	}
+	.main {
+		margin-top: 3.8rem;
+	}
 }
 </style>
