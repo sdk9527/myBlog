@@ -11,11 +11,17 @@ const routes = [
 	},
 	{
 		path: '/layout',
+		redirect: '/layout/articles',
 		component: () => import('../view/index.vue'),
 		children: [
 			{
 				path: 'articles',
-				component: () => import('../view/artical.vue'),
+				component: () => import('../view/artical/artical.vue'),
+				children: [
+					{
+						path: 'detail',
+					},
+				],
 			},
 			{
 				path: 'message',
