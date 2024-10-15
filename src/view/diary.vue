@@ -1,5 +1,5 @@
 <template>
-  <div>日志页面</div>
+  <div>日志页面1</div>
 </template>
 
 <script setup>
